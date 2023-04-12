@@ -173,6 +173,10 @@ class FullTableStream(Stream):
         stream_catalog = get_schema(catalogs, self.tap_stream_id)
         response = client.request(full_url, params=self.params)
 
+        if self.data_key not in response:
+            LOGGER.info('Cannot find key "{}" in response'.format(self.data_key))
+            return
+
         for record in response[self.data_key]:
             self.add_fields_at_1st_level(record,{"form_id": form_id})
 

@@ -1,5 +1,7 @@
 # tap-typeform
 
+Forked from [singer-io/typeform](https://github.com/singer-io/tap-typeform) to add additional functionality.
+
 This is a [Singer](https://singer.io) tap that produces JSON-formatted data following the [Singer spec](https://github.com/singer-io/getting-started/blob/master/docs/SPEC.md).
 
 This tap:
